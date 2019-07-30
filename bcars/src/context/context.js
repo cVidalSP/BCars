@@ -1,10 +1,12 @@
 import React from 'react';
 import api from '../services/axios.service';
 
-export default class rvItems extends React.Component{
+export default class MyProvider extends React.Component{
     state = {
         items : {},
-        usarData: {},
+        userData: {
+            nome: 'X',
+        },
     }
 
     componentDidMount(){
@@ -13,9 +15,27 @@ export default class rvItems extends React.Component{
         }); 
     }
 
+    mountNewData = (data) =>{
+        const newUserData = {...this.state.userData, data}
+        console.log(newUserData);
+        this.setState({
+            userData: newUserData
+        });
+    }
+
     render(){
-        console.log(this.state.items)
-        return(<p>teste</p>)
+
+        const { MyContext } = this.props;
+        
+
+        return(
+            <MyContext.Provider value={{
+                state : this.state,
+                // addValues: () => this.mountNewData(),
+            }}>
+                { this.props.children }
+            </MyContext.Provider>
+        )
     }
 }
 

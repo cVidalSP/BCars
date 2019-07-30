@@ -1,11 +1,16 @@
 import React from 'react';
-import RvItems from './context/context';
+import MyProvider from './context/context';
+
+import Exibir from './components/teste';
 
 function App() {
+
+  const MyContext = React.createContext();
+
   return (
-    <div>
-      <RvItems />
-    </div>
+    <MyProvider MyContext = { MyContext }>
+        <Exibir MyContext = { MyContext }/>
+    </MyProvider>
   );
 }
 
