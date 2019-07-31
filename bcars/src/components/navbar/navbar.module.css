@@ -1,0 +1,34 @@
+.navContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 35px 150px 35px 150px;
+}
+.navImg{
+    transform: scale(1.2);
+}
+.menuItems{
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style-type: none;
+}
+.menuItems li{
+    float: right;
+}
+.menuItems a{
+    text-decoration: none;
+    color: #A8A8A8;
+}
+li:first-child a {
+    color : #0F1C2D;
+}
+li:first-child:after{
+        position: absolute;
+        box-sizing: border-box;
+        content: "";
+        width: 45px;
+        height: 2px;
+        background: #AB1725;
+}

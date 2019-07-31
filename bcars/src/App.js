@@ -1,15 +1,15 @@
 import React from 'react';
-import MyProvider from './context/context';
 
-import Exibir from './components/teste';
+import MyProvider from './context/context';
+import NavBar from './components/navbar/navbar';
+import Controller from './controller/contentController';
+
 
 function App() {
-
-  const MyContext = React.createContext();
-
   return (
-    <MyProvider MyContext = { MyContext }>
-        <Exibir MyContext = { MyContext }/>
+    <MyProvider>
+      <NavBar />
+      <Controller />
     </MyProvider>
   );
 }
