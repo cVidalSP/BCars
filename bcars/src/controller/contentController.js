@@ -23,9 +23,7 @@ class MainContent extends Component {
                             <Paint /> :
                             context.state.navFlag === 3? 
                             <Wheels /> : <Final />}
-
-                            <button onClick={context.sumFlag}> prox </button>
-                            <button onClick={context.minusFlag}> ant </button>
+                            
                         </React.Fragment>
                     )}
             </MyContext.Consumer>

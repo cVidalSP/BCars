@@ -21,10 +21,10 @@
     text-decoration: none;
     color: #A8A8A8;
 }
-li:first-child a {
+.navContainer li:first-child a {
     color : #0F1C2D;
 }
-li:first-child:after{
+.navContainer li:first-child:after{
         position: absolute;
         box-sizing: border-box;
         content: "";

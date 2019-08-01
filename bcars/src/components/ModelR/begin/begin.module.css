@@ -1,0 +1,75 @@
+.mainContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.titlesContainer{
+    display: flex;
+    flex-direction: column;
+    margin: 2% 0px 0px -25%;
+}
+.smallTitle{
+    color: #AB1725;
+    letter-spacing: 8px;
+    font-size: 28px;
+    margin: 0;
+}
+.bigTitle{
+    color: #0F1C2D;
+    letter-spacing: 12px;
+    font-size:132px;
+    margin: 0;
+    line-height: 100%;
+}
+.bigTitle b{
+    color: #AB1725;
+}
+.carImg {
+    margin: -3.3% 0px 0px 0px;
+}
+.buttonContainer{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    cursor: pointer;
+
+}
+.nextIcon{
+    letter-spacing: 10px;
+    margin: 0;
+}
+.footer{
+    margin-top: 180px;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.footerItem :first-child{
+    color: #AB1725;
+}
+.footerItem {
+    display: flex;
+    flex-direction: column;
+    color: #0F1C2D;
+    font-size: 18px;
+    letter-spacing: 3px;
+}
+.footerItem p{
+    padding: 0;
+    margin: 0;
+    line-height: 100%;
+}
+.footerItem p b{
+    line-height: 100%;
+    font-size: 54px;
+}
+.footerItem p:nth-child(2):after{
+    position: absolute;
+    box-sizing: border-box;
+    content: "";
+    width: 100px;
+    height: 2px;
+    background: #AB1725;
+}
