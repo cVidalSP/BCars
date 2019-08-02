@@ -5,19 +5,22 @@ export const MyContext = React.createContext();
 
 export default class MyProvider extends React.Component{
     state = {
-        items : {},
-        userData: {},
+        items : [],
+        userData: {
+            engine: 0,
+            color: 0,
+            wheels: 0,
+        },
         navFlag: 0,
     }
 
     componentDidMount(){
-        api().then(res => {
+            api().then(res => {
             this.setState({items: res})
         }); 
     }
 
     sumFlagControl = () =>{
-        console.log('entrou sum');
         const sum = this.state.navFlag + 1;
 
         if ( sum <= 4 ){
@@ -28,8 +31,14 @@ export default class MyProvider extends React.Component{
         
     } 
 
+    updateEngine = (id) =>{
+        const newState = {...this.state}
+        newState.userData.engine = id;
+
+        this.setState({ newState });
+    }
+
     minusFlagControl = () =>{
-        console.log('entrou minus');
         const minus = this.state.navFlag - 1;
 
         if ( minus >= 0 ){
@@ -44,11 +53,7 @@ export default class MyProvider extends React.Component{
         return(
             <MyContext.Provider value={{
                 state : this.state,
-                addValues: (newData) => (
-                    this.state.new[`${Object.keys(newData)}`] === undefined || this.state.new[`${Object.keys(newData)}`] !== newData[0] ? this.setState({
-                        userData : {...this.state.userData , newData }
-                    }) : null
-                ),
+                updateEngine: (id) => this.updateEngine(id),
                 sumFlag:this.sumFlagControl,
                 minusFlag:this.minusFlagControl,
             }}>

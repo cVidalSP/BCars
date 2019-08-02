@@ -6,6 +6,7 @@ import Engine from '../components/ModelR/engine/engine';
 import Paint from '../components/ModelR/paint/paint';
 import Wheels from '../components/ModelR/wheels/wheels';
 import Final from '../components/ModelR/finalOrder/finalOrder';
+import OrderPanel from '../components/ModelR/orderStatus/orderStatus';
 
 class MainContent extends Component {
     render(){
@@ -24,6 +25,7 @@ class MainContent extends Component {
                             context.state.navFlag === 3? 
                             <Wheels /> : <Final />}
                             
+                            {context.state.navFlag >=1 ? <OrderPanel />: null}
                         </React.Fragment>
                     )}
             </MyContext.Consumer>

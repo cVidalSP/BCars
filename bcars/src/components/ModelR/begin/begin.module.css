@@ -13,7 +13,7 @@
     color: #AB1725;
     letter-spacing: 8px;
     font-size: 28px;
-    margin: 0;
+    margin: 0px 0px 0px 7px;
 }
 .bigTitle{
     color: #0F1C2D;
@@ -33,43 +33,44 @@
     flex-direction: row;
     align-content: center;
     cursor: pointer;
-
 }
 .nextIcon{
     letter-spacing: 10px;
     margin: 0;
 }
 .footer{
-    margin-top: 180px;
+    margin-top: 150px;
     bottom: 0;
     width: 100%;
     display: flex;
     justify-content: space-around;
 }
-.footerItem :first-child{
+.footerItem li:first-child{
     color: #AB1725;
 }
 .footerItem {
-    display: flex;
-    flex-direction: column;
     color: #0F1C2D;
     font-size: 18px;
     letter-spacing: 3px;
 }
-.footerItem p{
+.footerItem ul{
+    list-style-type: none;
+}
+.footerItem ul p{
     padding: 0;
     margin: 0;
     line-height: 100%;
 }
-.footerItem p b{
+.footerItem ul p b{
     line-height: 100%;
     font-size: 54px;
 }
-.footerItem p:nth-child(2):after{
+.footerItem li:nth-child(2)::after{
     position: absolute;
     box-sizing: border-box;
     content: "";
-    width: 100px;
+    margin-top: 10px;
+    width: 125px;
     height: 2px;
     background: #AB1725;
 }

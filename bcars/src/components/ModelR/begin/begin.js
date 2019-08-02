@@ -18,21 +18,27 @@ const Begin = () => {
                     <img className={ styles.carImg } src={ModelImg} alt={'car-image'} />
 
                     <div className={ styles.buttonContainer }>
-                        <p className={ styles.nextIcon } onClick={context.sumFlag}> BEGIN </p>
+                        <p className={ styles.nextIcon } onClick={ context.state.items !== "" ? context.sumFlag: null }> BEGIN </p>
                         <img src={ ArrowImg } alt={'arrow-svg'}/> 
                     </div>
                     <div className={ styles.footer }>
                         <div className={ styles.footerItem }>
-                            <p><b>2.5</b><small> s </small></p>
-                            <p>From 0 to 100</p>
+                            <ul>
+                                <li> <p><b>2.5</b><small> s </small></p> </li>
+                                <li> <p>From 0 to 100</p> </li>
+                            </ul>
                         </div>
                         <div className={ styles.footerItem }>
-                             <p><b>420</b><small> mi </small></p>
-                             <p>Miles range</p>
+                            <ul>
+                                <li> <p><b>420</b><small> mi </small></p> </li>
+                                <li> <p>Miles range</p> </li>
+                            </ul>
                         </div>
                         <div className={ styles.footerItem }>
-                             <p><b>250</b><small> mp/h </small></p>
-                             <p>Max speed</p>
+                             <ul>
+                                   <li> <p><b>250</b><small> mp/h </small></p> </li>
+                                   <li> <p>Max speed</p> </li>
+                             </ul>
                         </div>
                     </div>
                 </div>

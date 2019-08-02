@@ -9,11 +9,11 @@ const NavBar = () =>{
             <img className={ styles.navImg }  src={rvImage} alt={'Car'} />
             
             <ul className={ styles.menuItems } >
-                <li> <a href='#'> Model R       </a> </li>
-                <li> <a href='#'> Model IQ      </a> </li>
-                <li> <a href='#'> Model Mobi    </a> </li>
-                <li> <a href='#'> Model Charlie </a> </li>
-                <li> <a href='#'> Model Italy   </a ></li>
+                <li> <p> Model R       </p> </li>
+                <li> <p> Model IQ      </p> </li>
+                <li> <p> Model Mobi    </p> </li>
+                <li> <p> Model Charlie </p> </li>
+                <li> <p> Model Italy   </p> </li>
             </ul>
         
         </div>
