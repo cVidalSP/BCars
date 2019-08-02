@@ -15,7 +15,6 @@ const Engine = () =>{
 
     return(
         <div className={ styles.mainContainer }>
-
             
             <img src={context.state.userData.engine <= 1 ? car1 :
                 context.state.userData.engine === 2 ? car2 :
@@ -25,10 +24,9 @@ const Engine = () =>{
                 <h1>Engine</h1>
                 {context.state.items.engine.items.map((item,key) => 
                     (
-                    <div className={ styles.itemsContainer }>   
+                    <div key={key} className={ styles.itemsContainer }>   
                         <div 
-                            key={key}
-                            className={ context.state.userData.engine === item.id ? styles.selectedItem : styles.items } 
+                            className={ context.state.userData.engine === item.id || context.state.userData.engine === 0 && key === 0 ? styles.selectedItem : styles.items } 
                             data-context={ context } 
                             onClick={() => context.updateEngine(item.id) }>
 
@@ -36,7 +34,7 @@ const Engine = () =>{
                                 <p>{`${ item.kwh } kWh`}</p>
                                 <p>{`${ item.range } miles range`} </p>
 
-                            <div className={ context.state.userData.engine === item.id ? styles.selectedRadio : styles.radio }></div>
+                            <div className={ context.state.userData.engine === item.id || context.state.userData.engine === 0 && key === 0  ? styles.selectedRadio : styles.radio }></div>
                         
                         </div>
                         <p className={ styles.price }>{context.state.userData.engine === item.id && context.state.userData.engine !== 1 ? `+${FormatUs.format(item.price)}`: null}</p>

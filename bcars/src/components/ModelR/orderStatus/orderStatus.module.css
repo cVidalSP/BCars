@@ -61,10 +61,19 @@
     flex-direction: row;
     align-content: center;
     cursor: pointer;
-    padding-left: 15%;
+    padding-left: 10%;
 }
 .nextIcon{
-    letter-spacing: 5px;
+    letter-spacing: 3.75px;
     margin: auto;
     padding-right:10px; 
+    font-size: 20px;
+}
+.colorDot{
+    height: 18px;
+    width: 18px;
+}
+.wheelImg{
+    width: 45px;
+    height:auto;
 }

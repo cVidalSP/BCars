@@ -1,0 +1,77 @@
+.mainContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.imgContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.orderHeader{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    font-size: 45px;
+}
+.orderHeader p:nth-child(1){
+    font-weight: 200;
+}
+.orderHeader p:nth-child(2){
+    font-weight: 400;
+}
+.orderHeader p:nth-child(3){
+    font-weight: 400;
+    color: #AB1725;
+}
+.orderHeader p{
+    letter-spacing: 3.75px;
+    margin:  0px 10px 0px 0px;
+}
+.orderContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    width: 25%;
+}
+.items{
+    color: #0F1C2D;
+    width: 100%;
+    font-size: 22px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-weight: normal;
+}
+.items p:nth-child(2){
+    color: #AB1725;
+}
+.final{
+    color: #0F1C2D;
+    font-size: 32px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.final p:nth-child(2){
+    font-weight: 700;
+    color: #AB1725;
+}
+.pipe{
+    height: 1px;
+    width: 100%;
+    background-color: #979797;
+    opacity: 0.40;
+}
+.rebuildButton{
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 18px;
+    letter-spacing: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}

@@ -15,10 +15,10 @@ const Begin = () => {
                         <p className={ styles.smallTitle }> Build your </p>
                         <p className={ styles.bigTitle }> MODEL <b> R </b></p>
                     </div>
-                    <img className={ styles.carImg } src={ModelImg} alt={'car-image'} />
+                    <img className={ styles.carImg } src={ModelImg} alt={'car'} />
 
                     <div className={ styles.buttonContainer }>
-                        <p className={ styles.nextIcon } onClick={ context.state.items !== "" ? context.sumFlag: null }> BEGIN </p>
+                        <p className={ styles.nextIcon } onClick={  context.sumFlag }> BEGIN </p>
                         <img src={ ArrowImg } alt={'arrow-svg'}/> 
                     </div>
                     <div className={ styles.footer }>

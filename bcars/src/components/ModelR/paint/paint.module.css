@@ -1,0 +1,73 @@
+.mainContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 50px;
+}
+.imgContainer{
+    display: flex;
+    padding-top: 80px;
+    flex-direction: column;
+}
+.imgDescription{
+    margin: -35px 0px 0px 17%;
+    font-size: 22px;
+    font-weight: normal;
+}
+.imgDescription p{
+    margin: 0px;
+}
+.imgDescription p:nth-child(1){
+    color: #0F1C2D;
+}
+.imgDescription p:nth-child(2){
+    color: #AB1725;
+}
+.itemsContainer{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+.itemsContainer p:nth-child(1){
+    font-size: 45px;
+    font-weight: lighter;
+    letter-spacing: 3.75px;
+    color: #0F1C2D;
+    margin: 0px 0px 20px 0px;
+}
+.itemsContainer p:nth-child(2){
+    font-size: 16px;
+    font-weight: normal;
+    color: #A8A8A8;
+    margin: 0;
+}
+.colorPicker{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.colorImg{
+    position: absolute;
+    width: 50px;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.colorItems{
+    position: relative;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background-color: #f7f9fa;
+}
+.selectedColorItems{
+    position: relative;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background-color: #2E3948;
+}
+/* 2E3948 */

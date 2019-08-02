@@ -25,7 +25,7 @@ class MainContent extends Component {
                             context.state.navFlag === 3? 
                             <Wheels /> : <Final />}
                             
-                            {context.state.navFlag >=1 ? <OrderPanel />: null}
+                            { context.state.navFlag >=1 && context.state.navFlag <4 ? <OrderPanel />: null}
                         </React.Fragment>
                     )}
             </MyContext.Consumer>

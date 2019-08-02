@@ -10,6 +10,11 @@ export default class MyProvider extends React.Component{
             engine: 0,
             color: 0,
             wheels: 0,
+            finalValues: {
+                engine: 0,
+                color: 0,
+                wheels: 0,
+            }
         },
         navFlag: 0,
     }
@@ -18,6 +23,19 @@ export default class MyProvider extends React.Component{
             api().then(res => {
             this.setState({items: res})
         }); 
+    }
+
+    resetState = () =>{
+        const newState = this.state;
+        newState.navFlag = 0;
+        newState.userData.engine = 0;
+        newState.userData.color = 0;
+        newState.userData.wheels = 0;
+        newState.userData.finalValues.engine = 0;
+        newState.userData.finalValues.color = 0;
+        newState.userData.finalValues.wheels = 0;
+
+        this.setState({ newState });
     }
 
     sumFlagControl = () =>{
@@ -38,14 +56,18 @@ export default class MyProvider extends React.Component{
         this.setState({ newState });
     }
 
-    minusFlagControl = () =>{
-        const minus = this.state.navFlag - 1;
+    updateColor = (id) =>{
+        const newState = { ...this.state }
+        newState.userData.color = id;
 
-        if ( minus >= 0 ){
-            this.setState({
-                navFlag:  minus
-            })
-        }
+        this.setState({ newState });
+    }
+
+    updateWheel = (id) =>{
+        const newState = { ...this.state }
+        newState.userData.wheels = id;
+
+        this.setState({ newState });
     }
 
     render(){
@@ -54,8 +76,10 @@ export default class MyProvider extends React.Component{
             <MyContext.Provider value={{
                 state : this.state,
                 updateEngine: (id) => this.updateEngine(id),
-                sumFlag:this.sumFlagControl,
-                minusFlag:this.minusFlagControl,
+                updateColor: (id) => this.updateColor(id),
+                updateWheel : (id) => this.updateWheel(id),
+                resetState : this.resetState,
+                sumFlag: this.sumFlagControl,
             }}>
                 { this.props.children }
             </MyContext.Provider>
