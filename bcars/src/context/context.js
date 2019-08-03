@@ -38,6 +38,14 @@ export default class MyProvider extends React.Component{
         this.setState({ newState });
     }
 
+    setNavFlag = (id) =>{
+        
+        if(id > 0 && id < 4){
+            this.setState({ navFlag : id })
+        }
+
+    }
+
     sumFlagControl = () =>{
         const sum = this.state.navFlag + 1;
 
@@ -78,6 +86,7 @@ export default class MyProvider extends React.Component{
                 updateEngine: (id) => this.updateEngine(id),
                 updateColor: (id) => this.updateColor(id),
                 updateWheel : (id) => this.updateWheel(id),
+                setNavFlag : (id) => this.setNavFlag(id),
                 resetState : this.resetState,
                 sumFlag: this.sumFlagControl,
             }}>

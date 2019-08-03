@@ -71,21 +71,21 @@ const OrderPanel = () =>{
             <div className={ styles.statusItem }>
                 { context.state.navFlag >= 1 ?
 
-                    <p>{engineKwh}<b>{engineType}</b></p>
+                    <p className={ styles.engine } onClick={()=> context.setNavFlag(1) } >{engineKwh}<b>{engineType}</b></p>
                     
                     : null }
             </div>
             <div className={ styles.statusItem }>
                 { context.state.navFlag >= 2 ? 
 
-                    <img className={ styles.colorDot } src={ color === 4 ? DotRed: color === 5 ? DotBlue : color === 6 ? DotGrey: DotRed } alt={ 'car-color' }/>
+                    <img onClick={() => context.setNavFlag(2) } className={ styles.colorDot } src={ color === 4 ? DotRed: color === 5 ? DotBlue : color === 6 ? DotGrey: DotRed } alt={ 'car-color' }/>
                 
                 : null }
             </div>
             <div className={ styles.statusItem }>
                 { context.state.navFlag >= 3 ? 
                 
-                    <img className={ styles.wheelImg } src={ wheels === 7 ? Wheel1 : wheels === 8 ? Wheel2 : wheels === 9 ? Wheel3 : Wheel1 } alt={ 'wheel-img' } />
+                    <img onClick={() => context.setNavFlag(3)} className={ styles.wheelImg } src={ wheels === 7 ? Wheel1 : wheels === 8 ? Wheel2 : wheels === 9 ? Wheel3 : Wheel1 } alt={ 'wheel-img' } />
 
                 : null }
             </div> 
