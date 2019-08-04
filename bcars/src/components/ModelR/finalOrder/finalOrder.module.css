@@ -1,20 +1,5 @@
-.mainContainer{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-.imgContainer{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.orderHeader{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    font-size: 45px;
-}
+/*  */
+
 .orderHeader p:nth-child(1){
     font-weight: 200;
 }
@@ -28,13 +13,6 @@
 .orderHeader p{
     letter-spacing: 3.75px;
     margin:  0px 10px 0px 0px;
-}
-.orderContainer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    width: 25%;
 }
 .items{
     color: #0F1C2D;
@@ -66,12 +44,90 @@
     background-color: #979797;
     opacity: 0.40;
 }
-.rebuildButton{
-    cursor: pointer;
-    margin-top: 20px;
-    font-size: 18px;
-    letter-spacing: 10px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+
+
+@media  screen and (min-width: 320px){
+    .mainContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    } 
+    .orderHeader{
+        position: absolute;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        font-size: 45px;
+        margin-top: -400px;
+    }
+    .imgContainer{
+        padding-top: 70px;
+        display: flex;
+        justify-content: center;
+        margin-bottom: -70px;
+    }
+    .carImg{
+        transform: scale(0.8);
+    }
+    .orderContainer{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        transform: scale(0.8);
+    }
+    .rebuildButton{
+        cursor: pointer;
+        font-size: 18px;
+        letter-spacing: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+}
+@media  screen and (min-width: 1024px){
+    .mainContainer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: auto;
+    }
+    .imgContainer{
+        display: flex;
+        margin: 0;
+        padding: 0;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .carImg{
+        transform: scale(1);
+    }
+    .orderContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        width: 450px;
+        transform: scale(1);
+    }
+    .rebuildButton{
+        cursor: pointer;
+        margin-top: 20px;
+        font-size: 18px;
+        letter-spacing: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .orderHeader{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        font-size: 45px;
+        margin: 0px;
+        position: relative;
+    }
 }

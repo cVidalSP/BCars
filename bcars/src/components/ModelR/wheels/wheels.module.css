@@ -1,4 +1,4 @@
-.mainContainer{
+ .mainContainer{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,12 +9,6 @@
     letter-spacing: 3.75px;
     color: #0F1C2D;
 } 
-.itemsContainer{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
 .item{
     display: flex;
     flex-direction: column;
@@ -37,28 +31,7 @@
     font-weight: normal;
     height: 20px;
 }
-.selectedItem{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 400px;
-    height: 350px;
-    justify-content: flex-end;
-}
-.selectedItem p{
-    margin: 0px
-}
-.selectedItem p:nth-child(2){
-    margin-top: 40px;
-    font-size: 22px;
-    font-weight: normal;
-    color: #0F1C2D;
-}
-.selectedItem p:nth-child(3){
-    font-size: 22px;
-    font-weight: normal;
-    color: #AB1725;
-}
+
 .itemImg{
     width: 200px;
     height: auto;
@@ -67,5 +40,153 @@
     width: 200px;
     transform: scale(1.2);
     height: auto;
+}
+
+@media  screen and (min-width: 320px){
+    .itemsContainer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .selectedItemLeft{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 400px;
+        margin: 0px -10px 0px 41%; /* translateX */
+        height: 350px;
+        justify-content: flex-end;
+    }
+    .selectedItemMid{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 400px;
+        margin: 0px -150px 0px -150px; /* translateX */
+        height: 350px;
+        justify-content: flex-end;
+    }
+    .selectedItemRight{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 400px;
+        margin: 0px 650px 0px -120px; /* translateX */
+        height: 350px;
+        justify-content: flex-end;
+    }
+    .selectedItemLeft p{
+        margin: 0px
+    }
+    .selectedItemMid p{
+        margin: 0px
+    }
+    .selectedItemRight p{
+        margin: 0px
+    }
+    .selectedItemLeft p:nth-child(2){
+        margin-top: 40px;
+        font-size: 22px;
+        font-weight: normal;
+        color: #0F1C2D;
+    }
+    .selectedItemMid p:nth-child(2){
+        margin-top: 40px;
+        font-size: 22px;
+        font-weight: normal;
+        color: #0F1C2D;
+    }
+    .selectedItemRight p:nth-child(2){
+        margin-top: 40px;
+        font-size: 22px;
+        font-weight: normal;
+        color: #0F1C2D;
+    }
+    .selectedItemLeft p:nth-child(3){
+        font-size: 22px;
+        font-weight: normal;
+        color: #AB1725;
+    }
+    .selectedItemMid p:nth-child(3){
+        font-size: 22px;
+        font-weight: normal;
+        color: #AB1725;
+    }
+    .selectedItemRight p:nth-child(3){
+        font-size: 22px;
+        font-weight: normal;
+        color: #AB1725;
+    }
+}
+@media  screen and (min-width: 1024px){
+    .selectedItemLeft{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 400px;
+        height: 350px;
+        margin: 0;
+        justify-content: flex-end;
+    }
+    .selectedItemMid{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 400px;
+        height: 350px;
+        margin: 0;
+        justify-content: flex-end;
+    }
+    .selectedItemRight{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 400px;
+        margin: 0;
+        height: 350px;
+        justify-content: flex-end;
+    }
+    .selectedItemLeft p{
+        margin: 0px
+    }
+    .selectedItemMid p{
+        margin: 0px
+    }
+    .selectedItemRight p{
+        margin: 0px
+    }
+    .selectedItemLeft p:nth-child(2){
+        margin-top: 40px;
+        font-size: 22px;
+        font-weight: normal;
+        color: #0F1C2D;
+    }
+    .selectedItemMid p:nth-child(2){
+        margin-top: 40px;
+        font-size: 22px;
+        font-weight: normal;
+        color: #0F1C2D;
+    }
+    .selectedItemRight p:nth-child(2){
+        margin-top: 40px;
+        font-size: 22px;
+        font-weight: normal;
+        color: #0F1C2D;
+    }
+    .selectedItemLeft p:nth-child(3){
+        font-size: 22px;
+        font-weight: normal;
+        color: #AB1725;
+    }
+    .selectedItemMid p:nth-child(3){
+        font-size: 22px;
+        font-weight: normal;
+        color: #AB1725;
+    }
+    .selectedItemRight p:nth-child(3){
+        font-size: 22px;
+        font-weight: normal;
+        color: #AB1725;
+    }
 }
 

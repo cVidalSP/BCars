@@ -7,24 +7,11 @@
 
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
 
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.089);
 }
 .statusContainer div:first-child {
     padding-left: 7%;
-}
-.statusContainer div:first-child :nth-child(1){
-   color: #5B5B5B;
-   font-size: 16px;
-   font-weight: 800;
-   letter-spacing: 2px;
-}
-.statusContainer div:first-child :nth-child(2){
-    color: #AB1725;
-    font-size: 32px;
-    font-weight: lighter;
-    letter-spacing: 3.75px;
 }
 .statusContainer div:nth-child(2){
     color: #0F1C2D;
@@ -82,3 +69,104 @@
     height:auto;
     cursor: pointer;
 }
+
+@media  screen and (min-width: 320px){
+    .statusContainer{
+        justify-content: space-between;
+    }
+    .buttonContainer{
+        padding-right: 40px;
+    }
+    .statusContainer div:first-child :nth-child(1){
+        color: #5B5B5B;
+        font-size: 14px;
+        font-weight: 800;
+        letter-spacing: 2px;
+     }
+     .statusContainer div:first-child :nth-child(2){
+         color: #AB1725;
+         font-size: 24px;
+         font-weight: lighter;
+         letter-spacing: 3.75px;
+     }
+
+    .statusContainer div:nth-child(2){
+        display: none;
+    }
+    .statusContainer div:nth-child(3){
+        display: none;
+    }
+    .statusContainer div:nth-child(4){
+        display: none;
+    }
+    .statusContainer div:nth-child(5){
+        display: none;
+    }
+}
+@media  screen and (min-width: 768px){
+    .statusContainer{
+        justify-content: space-between;
+    }
+    .buttonContainer{
+        padding-right: 40px;
+    }
+    .statusContainer div:first-child :nth-child(1){
+        color: #5B5B5B;
+        font-size: 16px;
+        font-weight: 800;
+        letter-spacing: 2px;
+     }
+     .statusContainer div:first-child :nth-child(2){
+        color: #AB1725;
+        font-size: 32px;
+        font-weight: lighter;
+        letter-spacing: 3.75px;
+     }
+
+    .statusContainer div:nth-child(2){
+        display: none;
+    }
+    .statusContainer div:nth-child(3){
+        display: none;
+    }
+    .statusContainer div:nth-child(4){
+        display: none;
+    }
+    .statusContainer div:nth-child(5){
+        display: none;
+    }
+}
+@media  screen and (min-width: 1024px){
+    .statusContainer{
+        justify-content: flex-start;
+    }
+    .buttonContainer{
+        padding-left: 10%;
+    }
+    .statusContainer div:first-child :nth-child(1){
+        color: #5B5B5B;
+        font-size: 16px;
+        font-weight: 800;
+        letter-spacing: 2px;
+     }
+     .statusContainer div:first-child :nth-child(2){
+        color: #AB1725;
+        font-size: 32px;
+        font-weight: lighter;
+        letter-spacing: 3.75px;
+     }
+
+    .statusContainer div:nth-child(2){
+        display: flex;
+    }
+    .statusContainer div:nth-child(3){
+        display: flex;
+    }
+    .statusContainer div:nth-child(4){
+        display: flex;
+    }
+    .statusContainer div:nth-child(5){
+        display: flex;
+    }
+}
+

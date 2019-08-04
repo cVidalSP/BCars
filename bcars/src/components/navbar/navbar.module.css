@@ -1,20 +1,5 @@
-.navContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 25px 150px 25px 150px;
-}
-.navImg{
-    transform: scale(1.2);
-}
-.menuItems{
-    width: 40%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    list-style-type: none;
-}
 .menuItems li{
+    width: 100px;
     float: right;
 }
 .menuItems p{
@@ -26,10 +11,84 @@
     color : #0F1C2D;
 }
 .navContainer li:first-child:after{
-        position: absolute;
-        box-sizing: border-box;
-        content: "";
-        width: 45px;
-        height: 2px;
-        background: #AB1725;
+    position: absolute;
+    box-sizing: border-box;
+    content: "";
+    width: 45px;
+    height: 2px;
+    background: #AB1725;
+}
+
+@media only screen and (min-width: 320px){
+    .navContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 25px 30px 25px 30px;
+    }
+    .navImg{
+        transform: scale(1);
+    }
+    .menuItems{
+        margin-left: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        list-style-type: none;
+    }
+}
+@media only screen and (min-width: 768px){
+    .navContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 25px 80px 25px 80px;
+    }
+    .navImg{
+        transform: scale(1.2);
+    }
+    .menuItems{
+        margin-left: 100px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        list-style-type: none;
+    }
+}
+@media only screen and (min-width: 1024px){
+    .navContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 25px 80px 25px 80px;
+    }
+    .navImg{
+        transform: scale(1.2);
+    }
+    .menuItems{
+        width: 60%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        list-style-type: none;
+    }
+}
+
+@media only screen and (min-width: 1280px){
+    .navContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 25px 150px 25px 150px;
+    }
+    .navImg{
+        transform: scale(1.2);
+    }
+    .menuItems{
+        width: 40%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        list-style-type: none;
+    }
 }

@@ -43,7 +43,7 @@ const MainContent = () => {
     return(
         <div className={ styles.mainContainer }>
             <div className={ styles.imgContainer }>
-                <img className={ styles.carImg }src={ context.state.userData.color === 4 ? Car1 :
+                <img className={ styles.carImg } className={ styles.carImg }src={ context.state.userData.color === 4 ? Car1 :
                                                       context.state.userData.color === 5 ? Car2 :
                                                       context.state.userData.color === 6 ? Car3 : Car1 } alt={ 'final-car' } />
             </div>

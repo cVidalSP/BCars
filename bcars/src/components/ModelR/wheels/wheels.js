@@ -24,7 +24,7 @@ const MainContent = () => {
                 { context.state.items.wheels.items.map((item, key) =>{
                     return(
                         <div key={ key }  onClick={() => context.updateWheel(item.id) } 
-                        className={ context.state.userData.wheels === item.id || context.state.userData.wheels === 0 && key === 0 ? styles.selectedItem : styles.item }>
+                        className={ context.state.userData.wheels === item.id || context.state.userData.wheels === 0 && key === 0 ? key === 0 ? styles.selectedItemLeft : key === 1 ? styles.selectedItemMid : styles.selectedItemRight : styles.item }>
                             <img className={ context.state.userData.wheels === item.id || 
                                 context.state.userData.wheels === 0 && key === 0 ? styles.selectedItemImg : styles.itemImg } 
                                 src={ item.id === 7 ? Wheel1 : item.id === 8 ? Wheel2 : Wheel3 } alt={ 'wheel-img' }/>

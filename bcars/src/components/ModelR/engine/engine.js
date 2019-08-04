@@ -16,7 +16,7 @@ const Engine = () =>{
     return(
         <div className={ styles.mainContainer }>
             
-            <img src={context.state.userData.engine <= 1 ? car1 :
+            <img className={ styles.carImg } src={context.state.userData.engine <= 1 ? car1 :
                 context.state.userData.engine === 2 ? car2 :
                 context.state.userData.engine === 3 ? car3 : car1 } alt={ 'car-engines' }/>
 

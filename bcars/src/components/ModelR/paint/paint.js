@@ -23,7 +23,7 @@ const MainContent = () => {
     return(
         <div className={ styles.mainContainer }>
             <div className={ styles.imgContainer }>
-                <img src={ context.state.userData.color === 4 ? Car1 :
+                <img className={ styles.carImg }src={ context.state.userData.color === 4 ? Car1 :
                            context.state.userData.color === 5 ? Car2 :
                            context.state.userData.color === 6 ? Car3 : Car1 } alt={'car-color'} />
 
@@ -36,8 +36,10 @@ const MainContent = () => {
                 </div>
             </div>
             <div className={ styles.itemsContainer }>
-                <p> Color </p>
-                <p>{context.state.items.color.description}</p>
+                <div className={ styles.colorDescription }>
+                    <p> Color </p>
+                    <p>{ context.state.items.color.description }</p>
+                </div>
                 <div className={ styles.colorPicker }>
                     { context.state.items.color.items.map((item, key) =>{
 
